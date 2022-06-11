@@ -1,4 +1,4 @@
-const Manager = require("manager");
+const Manager = require("../lib/manager");
 const manager1 = new Manager("Will", "1", "williamliao1998@gmail.com", "2");
 
 describe("Engineer", () => {
