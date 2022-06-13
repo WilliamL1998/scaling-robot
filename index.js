@@ -1,11 +1,15 @@
+// Import classes, inquirer, helper code, and file system
 const inquirer = require("inquirer");
 const Manager = require("./lib/manager");
 const Engineer = require("./lib/engineer");
 const Intern = require("./lib/intern");
 const fs = require("fs");
-var team = [];
 const build = require("./src/build");
 
+// global array to store the manager, engineer, and intern objects
+var team = [];
+
+// inquirer prompts for the manager
 const promptManager = () => {
     team = [];
     inquirer
@@ -66,11 +70,13 @@ const promptManager = () => {
         .then(answers => {
             const manager = new Manager(answers.name, answers.id, answers.email, answers.officeNumber)
             console.log(`Hello manager ${manager.name}.`);
+            // pushes the manager object to the global array and starts the menu prompt
             team.push(manager);
             promptMenu();
         })
 }
 
+// inquirer prompts for the engineer
 const promptEngineer = () => {
     inquirer
         .prompt([
@@ -130,11 +136,13 @@ const promptEngineer = () => {
         .then(answers => {
             const engineer = new Engineer(answers.name, answers.id, answers.email, answers.github);
             console.log(`Engineer ${engineer.name} has been added to your team.`);
+            // pushes the engineer object to the global array and starts the menu prompt
             team.push(engineer);
             promptMenu();
         })
 }
 
+// inquirer prompts for the intern
 const promptIntern = () => {
     inquirer
         .prompt([
@@ -194,11 +202,13 @@ const promptIntern = () => {
         .then(answers => {
             const intern = new Intern(answers.name, answers.id, answers.email, answers.school)
             console.log(`Intern ${intern.name} has been added to your team.`)
+            // pushes the intern object to the global array and starts the menu prompt
             team.push(intern)
             promptMenu();
         })
 }
 
+// inquirer prompts of a menu for the manager to choose
 const promptMenu = () => {
     inquirer
         .prompt([
@@ -210,6 +220,7 @@ const promptMenu = () => {
             }
         ])
         .then(answers => {
+            // switch cases to either loop back to adding an engineer or an intern, otherwise build the html
             switch (answers.menu) {
                 case "Add an engineer":
                     promptEngineer();
@@ -218,19 +229,19 @@ const promptMenu = () => {
                     promptIntern();
                     break;
                 case "Finish building my team":
-                    console.log(team)
                     buildHtml();
                     break;
             }
         })
 }
 
+// uses the imported helper code "build()" to generate the data to make the team html
 const buildHtml = () => {
-    fs.writeFile("test.html", build(team), (err) =>
+    fs.writeFile("./dist/team.html", build(team), (err) =>
     err ? console.error(err) : console.log('Success!'))
 }
 
 
 
-
+// the manager prompts initiates it all
 promptManager()

@@ -7,7 +7,7 @@
   },
   "name": "scaling-robot",
   "version": "1.0.0",
-  "main": "indexMVP.js",
+  "main": "index.js",
   "directories": {
     "lib": "lib",
     "test": "tests"
@@ -19,7 +19,7 @@
     "type": "git",
     "url": "git+https://github.com/WilliamL1998/scaling-robot.git"
   },
-  "author": "",
+  "author": "William Liao",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/WilliamL1998/scaling-robot/issues"

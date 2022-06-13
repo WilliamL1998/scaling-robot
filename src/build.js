@@ -1,5 +1,8 @@
+// the "team" input will be the team array created in the series of prompts in index.js
 const buildCards = (team) => {
-    const card = []
+    // global array to hold all the card elements created
+    var card = []
+    // card element for the manager that retreives the data from the manager object found in the input "team"
     const buildManager = (Manager) => {
         var managerCard = `
         <div class="card m-3" style="width: 18rem;">
@@ -15,6 +18,7 @@ const buildCards = (team) => {
         </div>`
         card.push(managerCard)
     }
+    // card element for the engineer that retreives the data from the engineer object found in the input "team"
     const buildEngineer = (Engineer) => {
         var engineerCard = `
          <div class="card m-3" style="width: 18rem;">
@@ -30,6 +34,7 @@ const buildCards = (team) => {
         </div>`
         card.push(engineerCard)
     }
+    // card element for the intern that retreives the data from the intern object found in the input "team"
     const buildIntern = (Intern) => {
         var internCard = `
         <div class="card m-3" style="width: 18rem;">
@@ -45,6 +50,7 @@ const buildCards = (team) => {
         </div>`
         card.push(internCard)
     }
+    // for loop that iterates through the team array to identify if the object is a manager, an engineer, or an intern
     for (var i = 0; i < team.length; i++) {
         if (team[i].getRole() == "Manager") {
             buildManager(team[i])
@@ -56,9 +62,11 @@ const buildCards = (team) => {
             buildIntern(team[i])
         }
     }
+    // combines all the created card elements together with no spaces, or commas
     return card.join("")
 }
 
+// export the follow code. a baseline HTML structure with bootstrap and fontawesome links and the above function buildCards(team) inserted in the body.
 module.exports = (team) => {
     return `
 <!DOCTYPE html>
