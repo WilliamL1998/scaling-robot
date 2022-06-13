@@ -4,7 +4,7 @@ const buildCards = (team) => {
         var managerCard = `
         <div class="card m-3" style="width: 18rem;">
             <div class="card-body bg-primary">
-                <h5 class="card-title text-white">William</h5>
+                <h5 class="card-title text-white">${Manager.name}</h5>
                 <p class="card-text text-white"><i class="fa-solid fa-mug-hot"></i> Manager</p>
             </div>
             <ul class="list-group list-group-flush">
@@ -19,7 +19,7 @@ const buildCards = (team) => {
         var engineerCard = `
          <div class="card m-3" style="width: 18rem;">
             <div class="card-body bg-primary">
-                <h5 class="card-title text-white">Sam</h5>
+                <h5 class="card-title text-white">${Engineer.name}</h5>
                 <p class="card-text text-white"><i class="fa-solid fa-glasses"></i> Engineer</p>
             </div>
             <ul class="list-group list-group-flush">
@@ -34,7 +34,7 @@ const buildCards = (team) => {
         var internCard = `
         <div class="card m-3" style="width: 18rem;">
             <div class="card-body bg-primary">
-                <h5 class="card-title text-white">Vera</h5>
+                <h5 class="card-title text-white">${Intern.name}</h5>
                 <p class="card-text text-white"><i class="fa-solid fa-user-graduate"></i> Intern</p>
             </div>
             <ul class="list-group list-group-flush">

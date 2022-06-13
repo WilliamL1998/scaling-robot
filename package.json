@@ -4,5 +4,26 @@
   },
   "dependencies": {
     "inquirer": "^8.2.4"
-  }
+  },
+  "name": "scaling-robot",
+  "version": "1.0.0",
+  "main": "indexMVP.js",
+  "directories": {
+    "lib": "lib",
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WilliamL1998/scaling-robot.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/WilliamL1998/scaling-robot/issues"
+  },
+  "homepage": "https://github.com/WilliamL1998/scaling-robot#readme",
+  "description": ""
 }
