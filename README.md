@@ -20,7 +20,7 @@ After cloning the repository down to your local machine, run "npm install i" in 
 
 ## Usage
 
-Simply type "node index.js" in the termial to begin. Answer the prompts and at the end, a HTML file will be created in the dist folder.
+Simply type "node index.js" in the termial to begin. Answer the prompts and at the end, a HTML file will be created in the dist folder. Demonstration video here: https://drive.google.com/file/d/1R0LGnmJrFf_tOqiKdulC40AK95_WuPAn/view
 
 ## License
 
