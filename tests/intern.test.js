@@ -1,9 +1,9 @@
 const Intern = require("../lib/intern");
 const intern1 = new Intern("Will", "1", "williamliao1998@gmail.com", "UofT");
 
-describe("Engineer", () => {
+describe("Intern", () => {
     describe("constructor", () => {
-        test("the properties of the new object named intern1", () => {
+        test("the properties of the new object named intern1 matches expected properties", () => {
             expect(intern1.name).toBe("Will");
             expect(intern1.id).toBe("1");
             expect(intern1.email).toBe("williamliao1998@gmail.com");

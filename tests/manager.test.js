@@ -1,9 +1,9 @@
 const Manager = require("../lib/manager");
 const manager1 = new Manager("Will", "1", "williamliao1998@gmail.com", "2");
 
-describe("Engineer", () => {
+describe("Manager", () => {
     describe("constructor", () => {
-        test("the properties of the new object named manager1", () => {
+        test("the properties of the new object named manager1 matches expected properties", () => {
             expect(manager1.name).toBe("Will");
             expect(manager1.id).toBe("1");
             expect(manager1.email).toBe("williamliao1998@gmail.com");

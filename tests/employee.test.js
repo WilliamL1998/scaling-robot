@@ -3,7 +3,7 @@ const employee1 = new Employee("Will", "1", "williamliao1998@gmail.com");
 
 describe("Employee", () => {
     describe("constructor", () => {
-        test("the properties of the new object named employee1", () => {
+        test("the properties of the new object named employee1 matches expected properties", () => {
             expect(employee1.name).toBe("Will");
             expect(employee1.id).toBe("1");
             expect(employee1.email).toBe("williamliao1998@gmail.com");
